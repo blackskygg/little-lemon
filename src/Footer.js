@@ -1,4 +1,5 @@
 import logoTransparent from './assets/LogoTransparent.svg';
+import { adaptiveGrid, selfCenter } from './commonStyles';
 
 function FooterLink({ name, link }) {
     return (
@@ -19,20 +20,18 @@ function FooterSection({ title, links }) {
     )
 }
 
-const footerClasses = [
-    'grid content-center justify-center',
-    'md:grid-rows-1 md:grid-cols-12',
-    'grid-cols-1 grid-rows-auto',
-].join(' ');
+const footerClasses = adaptiveGrid;
 
 const imgClasses = [
-    'self-center justify-self-center box-border h-16',
-    'md:col-start-2 md:col-span-2',
+    selfCenter,
+    'box-border h-16',
+    'lg:justify-self-start lg:col-start-3 lg:col-span-2',
 ].join(' ');
 
 const linkContainerClasses = [
-    'flex flex-row flex-wrap justify-around',
-    'md:flex-nowrap md:col-start-5 md:col-span-6',
+    selfCenter,
+    'lg:justify-self-end lg:col-start-5 lg:col-span-6',
+    'flex flex-wrap gap-8 lg:flex-nowrap',
 ].join(' ');
 
 function Footer() {

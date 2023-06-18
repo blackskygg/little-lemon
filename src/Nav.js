@@ -1,3 +1,5 @@
+import { selfCenter } from "./commonStyles";
+
 function NavItem({ name, link }) {
     return (
         <li className='whitespace-nowrap my-auto px-2'>
@@ -6,10 +8,15 @@ function NavItem({ name, link }) {
     );
 }
 
+const navClasses = [
+    selfCenter,
+    'lg:col-start-5 lg:col-span-6 lg:justify-self-end',
+].join(' ');
+
 function Nav() {
     return (
-        <nav className='grid self-center justify-start md:col-start-5 md:col-span-6'>
-            <ul className='flex flex-wrap md:flex-nowrap justify-around'>
+        <nav className={navClasses}>
+            <ul className='flex flex-wrap lg:flex-nowrap'>
                 <NavItem name='HOME' link='#' />
                 <NavItem name='ABOUT' link='#' />
                 <NavItem name='MENU' link='#' />
