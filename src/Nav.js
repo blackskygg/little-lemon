@@ -1,6 +1,6 @@
 function NavItem({ name, link }) {
     return (
-        <li>
+        <li className='whitespace-nowrap my-auto px-2'>
             <a href={link}> {name} </a>
         </li>
     );
@@ -8,8 +8,8 @@ function NavItem({ name, link }) {
 
 function Nav() {
     return (
-        <nav>
-            <ul>
+        <nav className='grid self-center justify-start md:col-start-5 md:col-span-6'>
+            <ul className='flex flex-wrap md:flex-nowrap justify-around'>
                 <NavItem name='HOME' link='#' />
                 <NavItem name='ABOUT' link='#' />
                 <NavItem name='MENU' link='#' />
