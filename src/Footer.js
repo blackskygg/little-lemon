@@ -29,7 +29,7 @@ const linkContainerClasses = [
 function Footer() {
     return (
         <footer className={footerClasses + ' bg-1-d p-2'}>
-            <img src={logoTransparent} alt='footer logo' className={imgClasses + ' bg-white box-border h-32 p-2'} />
+            <img src={logoTransparent} alt='footer logo' className={imgClasses + ' bg-white box-border h-40 p-2'} />
             <div className={linkContainerClasses}>
                 <FooterSection
                     title='Navigation'

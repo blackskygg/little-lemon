@@ -1,4 +1,7 @@
 import { adaptiveGrid, button, hoverLink, selfCenter } from "./commonStyles";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faMotorcycle } from '@fortawesome/free-solid-svg-icons'
+
 import restaurantImg from './assets/restaurant.jpg';
 import greakSalad from './assets/greek salad.jpg';
 import lemonDessert from './assets/lemon dessert.jpg';
@@ -42,7 +45,7 @@ function SpecialCard({ img, name, price, description, lgStart, span, align }) {
                     <span className='text-highlight'> {price} </span>
                 </div>
                 <p className='text-paragraph pb-4 text-h-d'> {description} </p>
-                <a href='#' className={'text-highlight ' + hoverLink}> Order a delivery </a>
+                <a href='#' className={'text-highlight ' + hoverLink}> Order a delivery <FontAwesomeIcon icon={faMotorcycle} /> </a>
             </div>
         </article>
     );
