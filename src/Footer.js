@@ -1,20 +1,12 @@
 import logoTransparent from './assets/LogoTransparent.svg';
 import { adaptiveGrid, selfCenter } from './commonStyles';
 
-function FooterLink({ name, link }) {
-    return (
-        <li>
-            <a href={link}> {name} </a>
-        </li>
-    )
-}
-
 function FooterSection({ title, links }) {
     return (
         <div className='inline col-span-2'>
-            <h1> {title} </h1>
-            <ul>
-                {links.map(({ name, link }) => <FooterLink name={name} link={link} />)}
+            <h1 className='text-card-title'> {title} </h1>
+            <ul className='text-paragraph'>
+                {links.map(({ name, link }) => <li> <a href={link}> {name} </a> </li>)}
             </ul>
         </div>
     )
@@ -25,19 +17,19 @@ const footerClasses = adaptiveGrid;
 const imgClasses = [
     selfCenter,
     'box-border h-16',
-    'lg:justify-self-start lg:col-start-3 lg:col-span-2',
+    'xl:justify-self-start xl:col-start-3 xl:col-span-2',
 ].join(' ');
 
 const linkContainerClasses = [
     selfCenter,
-    'lg:justify-self-end lg:col-start-5 lg:col-span-6',
-    'flex flex-wrap gap-8 lg:flex-nowrap',
+    'xl:justify-self-end xl:col-start-5 xl:col-span-6',
+    'flex flex-wrap gap-8 xl:flex-nowrap',
 ].join(' ');
 
 function Footer() {
     return (
-        <footer className={footerClasses}>
-            <img src={logoTransparent} alt='footer logo' className={imgClasses} />
+        <footer className={footerClasses + ' bg-1-d p-2'}>
+            <img src={logoTransparent} alt='footer logo' className={imgClasses + ' bg-white box-border h-32 p-2'} />
             <div className={linkContainerClasses}>
                 <FooterSection
                     title='Navigation'

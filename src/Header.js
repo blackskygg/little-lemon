@@ -4,11 +4,11 @@ import { adaptiveGrid, selfCenter } from './commonStyles';
 
 const headerClasses = [
     adaptiveGrid,
-    'lg:h-24',
+    'xl:h-24',
 ].join(' ');
 const imgClasses = [
     selfCenter,
-    'lg:col-start-3 lg:col-span-2 lg:justify-self-start',
+    'xl:col-start-3 xl:col-span-2 xl:justify-self-start',
 ].join(' ');
 
 function Main() {
