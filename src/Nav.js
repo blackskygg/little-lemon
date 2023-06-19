@@ -1,9 +1,9 @@
-import { selfCenter } from "./commonStyles";
+import { hoverLink, selfCenter } from "./commonStyles";
 
 function NavItem({ name, link }) {
     return (
         <li className='whitespace-nowrap my-auto px-2'>
-            <a href={link} className='text-highlight'> {name} </a>
+            <a href={link} className={'text-highlight ' + hoverLink}> {name} </a>
         </li>
     );
 }

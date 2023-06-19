@@ -7,4 +7,6 @@ export const selfCenter = [
     'self-center justify-self-center',
 ].join(' ');
 
-export const button = 'bg-1-l text-highlight rounded-2xl p-2';
+export const button = 'bg-1-l text-highlight rounded-2xl px-4 py-2 hover:bg-2-d';
+
+export const hoverLink = 'hover:shadow-lg hover:underline';

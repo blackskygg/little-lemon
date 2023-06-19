@@ -1,4 +1,4 @@
-import { adaptiveGrid, button, selfCenter } from "./commonStyles";
+import { adaptiveGrid, button, hoverLink, selfCenter } from "./commonStyles";
 import restaurantImg from './assets/restaurant.jpg';
 import greakSalad from './assets/greek salad.jpg';
 import lemonDessert from './assets/lemon dessert.jpg';
@@ -39,10 +39,10 @@ function SpecialCard({ img, name, price, description, lgStart, span, align }) {
             <div className='p-2 h-full'>
                 <div className='flex flex-wrap justify-between items-end pb-4'>
                     <span className='text-card-title'> {name} </span>
-                    <span className='text-highligth'> {price} </span>
+                    <span className='text-highlight'> {price} </span>
                 </div>
-                <p className='text-paragraph pb-4'> {description} </p>
-                <a href='#' className='text-highlight font-bold'> Order a delivery </a>
+                <p className='text-paragraph pb-4 text-h-d'> {description} </p>
+                <a href='#' className={'text-highlight ' + hoverLink}> Order a delivery </a>
             </div>
         </article>
     );
