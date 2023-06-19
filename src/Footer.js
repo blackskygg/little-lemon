@@ -3,7 +3,7 @@ import { adaptiveGrid, hoverLink, selfCenter } from './commonStyles';
 
 function FooterSection({ title, links }) {
     return (
-        <div className='inline col-span-2'>
+        <div className='inline col-span-2 text-h-l'>
             <h1 className='text-card-title'> {title} </h1>
             <ul className='text-paragraph'>
                 {links.map(({ name, link }) => <li> <a href={link} className={hoverLink}> {name} </a> </li>)}
