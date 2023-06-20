@@ -1,11 +1,6 @@
-export const adaptiveGrid = [
-    'grid grid-cols-1 grid-rows-auto',
-    'xl:grid-cols-12 xl:grid-rows-1',
-].join(' ');
+export const adaptiveGrid = 'grid grid-cols-1 grid-rows-auto xl:grid-cols-12';
 
-export const selfCenter = [
-    'self-center justify-self-center',
-].join(' ');
+export const selfCenter = 'self-center justify-self-center';
 
 export const adaptiveInlineFlex = [
     selfCenter,
