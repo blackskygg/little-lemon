@@ -4,7 +4,7 @@ import { adaptiveGrid, selfCenter } from './commonStyles';
 
 const headerClasses = [
     adaptiveGrid,
-    'xl:h-24',
+    'p-4',
 ].join(' ');
 const imgClasses = [
     selfCenter,

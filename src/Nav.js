@@ -18,12 +18,12 @@ function Nav() {
     return (
         <nav className={navClasses}>
             <ul className='flex flex-wrap xl:flex-nowrap'>
-                <NavItem name='HOME' link='/' />
-                <NavItem name='ABOUT' link='#' />
-                <NavItem name='MENU' link='#' />
-                <NavItem name='RESERVATIONS' link='/book' />
-                <NavItem name='ORDER ONLINE' link='#' />
-                <NavItem name='LOGIN' link='#' />
+                <NavItem name='Home' link='/' />
+                <NavItem name='About' link='#' />
+                <NavItem name='Menu' link='#' />
+                <NavItem name='Reservations' link='/book' />
+                <NavItem name='Order Online' link='#' />
+                <NavItem name='Login' link='#' />
             </ul>
         </nav>
     );
