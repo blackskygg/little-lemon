@@ -1,10 +1,10 @@
-import { adaptiveGrid, adaptiveInlineFlex, button, hoverLink, selfCenter } from "./commonStyles";
+import { adaptiveGrid, adaptiveInlineFlex } from "./commonStyles";
 import greakSalad from './assets/greek salad.jpg';
 
 
 function ReviewCard({ rating, name, img, text }) {
     return (
-        <article className={selfCenter + ' w-40 rounded-2xl bg-h-l m-2 p-2'}>
+        <article className='w-40 rounded-2xl bg-h-l m-2 p-2'>
             <p className='text-lead'> {`Rating: ${rating}`} </p>
             <div className='flex justify-left items-center gap-4 my-4'>
                 <img src={img} alt='review' className='box-border w-12 h-12'/>

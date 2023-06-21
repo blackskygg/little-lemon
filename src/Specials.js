@@ -8,7 +8,7 @@ import lemonDessert from './assets/lemon dessert.jpg';
 
 function SpecialCard({ img, name, price, description }) {
     return (
-        <article className={selfCenter + ' w-48 rounded-t-2xl bg-h-l m-2'}>
+        <article className='w-48 rounded-t-2xl bg-h-l m-2'>
             <img src={img} alt={name} className='rounded-t-2xl box-border h-32 w-full' />
             <div className='p-2 h-full'>
                 <div className='flex flex-wrap justify-between items-end pb-4'>
