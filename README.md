@@ -9,3 +9,15 @@
 * Unit tests.
 
 ### Screenshots
+
+#### Home Large
+![home large](https://github.com/blackskygg/little-lemon/blob/main/screenshots/home-large.png?raw=true)
+
+#### Home Small
+![home large](https://github.com/blackskygg/little-lemon/blob/main/screenshots/home-small.png?raw=true)
+
+#### Booking Large
+![home large](https://github.com/blackskygg/little-lemon/blob/main/screenshots/book-large.png?raw=true)
+
+#### Booking Small
+![home large](https://github.com/blackskygg/little-lemon/blob/main/screenshots/book-small.png?raw=true)
