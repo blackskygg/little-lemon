@@ -1,15 +1,17 @@
 import { fireEvent, render, screen } from "@testing-library/react";
 import BookingForm from './BookingForm';
 import { act } from "react-dom/test-utils";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import {  MemoryRouter, Route, Routes } from "react-router-dom";
+import ConfirmedBooking from "./ConfirmedBooking";
 
 async function renderForm(availableTimes, updateTimes) {
     render(
-        <BrowserRouter>
+        <MemoryRouter>
             <Routes>
                 <Route path='/' element={<BookingForm availableTimes={availableTimes} updateTimes={updateTimes} />} />
+                <Route path='/confirmed' element={<> confirmed </>} />
             </Routes>
-        </BrowserRouter>
+        </MemoryRouter>
     );
 }
 
@@ -62,3 +64,39 @@ test('Updates time when date changes', async () => {
     ]);
 });
 
+test('Validates form field - Success', async () => {
+    let availableTimes = [];
+    const updateTimes = jest.fn();
+
+    await act(async () => {
+        renderForm(availableTimes, updateTimes);
+    });
+
+    const input = screen.getByDisplayValue('Confirm');
+    await act(async () => {
+        fireEvent.focus(input);
+        fireEvent.click(input);
+    });
+
+    expect(screen.getByText('confirmed')).toBeInTheDocument();
+});
+
+test('Validates form field - Failed', async () => {
+    let availableTimes = [];
+    const updateTimes = jest.fn();
+
+    await act(async () => {
+        renderForm(availableTimes, updateTimes);
+    });
+
+    const input = screen.getByDisplayValue('Confirm');
+    const guests = screen.getByLabelText('Number of guests');
+    await act(async () => {
+        fireEvent.focus(guests);
+        fireEvent.change(guests, { target: { value: 20 } });
+        fireEvent.focus(input);
+        fireEvent.click(input);
+    });
+
+    expect(screen.queryByText('confirmed')).not.toBeInTheDocument();
+});
