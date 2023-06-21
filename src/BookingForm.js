@@ -1,14 +1,14 @@
 import { useFormik } from 'formik';
 import { useEffect } from 'react';
-import { button, hoverLink } from './commonStyles';
+import { button } from './commonStyles';
 import * as Yup from 'yup';
 import { fetchAPI, submitAPI } from './apis';
 import { useNavigate } from 'react-router-dom';
 
 const formClasses = 'self-stretch flex flex-col items-start gap-[20px] bg-h-l p-4 rounded-2xl box-border';
 const labelClasses = 'block text-paragraph font-bold px-2';
-const inputClasses = 'text-paragraph bg-white rounded-2xl px-4 py-1 hover:shadow-xl';
-const selectClasses = inputClasses + ' border-r-[1rem] border-white';
+const inputClasses = 'text-paragraph bg-white rounded-2xl px-4 py-1 hover:shadow-xl w-40';
+const selectClasses = inputClasses + ' border-r-4 border-white';
 
 function BookingForm({ availableTimes, updateTimes }) {
     const navigate = useNavigate();
