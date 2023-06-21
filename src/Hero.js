@@ -1,4 +1,4 @@
-import { adaptiveGrid, button, hoverLink, selfCenter } from "./commonStyles";
+import { adaptiveGrid, button, selfCenter } from "./commonStyles";
 import { Link } from 'react-router-dom';
 import restaurantImg from './assets/restaurant.jpg';
 
@@ -22,7 +22,7 @@ function Hero() {
                     <h3 className='text-card-title text-h-l'> Chicago </h3>
                     <p className='text-paragraph text-h-l'> Little Lemon is a family-owned Mediterranean restaurant, focused on traditional recipes served with a modern twist. </p>
                 </article>
-                <Link to='/book' role='button' className={button}> Reserve a Table </Link>
+                <Link aria-label="On Click" to='/book' role='button' className={button}> Reserve a Table </Link>
             </div>
             <div className={heroRightClasses}>
                 <img src={restaurantImg} alt='hero' className='h-60' />

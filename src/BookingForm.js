@@ -70,7 +70,7 @@ function BookingForm({ availableTimes, updateTimes }) {
                     <option>Anniversary</option>
                 </select>
             </div>
-            <input className={[button, hoverLink, 'self-center text-paragraph'].join(' ')} type='submit' value='Confirm' />
+            <input aria-label="On Click" className={[button, 'self-center text-paragraph'].join(' ')} type='submit' value='Confirm' />
         </form>
     );
 }

@@ -6,7 +6,7 @@ function ConfirmedBooking() {
         <section>
             <div className='bg-h-l p-4 mb-8 rounded-2xl box-border w-60 mx-auto'>
                 <p className='text-center text-lead mx-auto mb-4 box-border w-full'> Reservation confirmed! </p>
-                <Link role='button' className={button + ' block mx-auto w-16'} to='/'> OK! </Link>
+                <Link aria-label="On Click" role='button' className={button + ' block mx-auto w-16'} to='/'> OK! </Link>
             </div>
         </section>
     );

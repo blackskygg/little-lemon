@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function NavItem({ name, link }) {
     return (
         <li className='whitespace-nowrap my-auto px-2'>
-            <Link to={link} className={'text-highlight ' + hoverLink}> {name} </Link>
+            <Link aria-label="On Click" to={link} className={'text-highlight ' + hoverLink}> {name} </Link>
         </li>
     );
 }
